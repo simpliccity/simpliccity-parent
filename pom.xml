@@ -44,17 +44,43 @@
 		<displayTitle>Simpliccity.org</displayTitle>
 	</properties>
 	
-	<distributionManagement>
-		<repository>
-			<id>icc.simpliccity.release</id>
-			<name>ICC Nexus Release Repository</name>
-			<url>http://nexus.icc.local/nexus/content/repositories/icc.simpliccity.release/</url>
-		</repository>
-		<snapshotRepository>
-			<id>icc.simpliccity.snapshot</id>
-			<name>ICC Nexus Snapshot Repository</name>
-			<url>http://nexus.icc.local/nexus/content/repositories/icc.simpliccity.snapshot/</url>
-		</snapshotRepository>
-	</distributionManagement>
+	<profiles>
+		<profile>
+			<id>default</id>
+			<activation>
+      			<activeByDefault>true</activeByDefault>
+    		</activation>
+
+			<distributionManagement>
+				<repository>
+					<id>icc.simpliccity.release</id>
+					<name>ICC Nexus Release Repository</name>
+					<url>http://nexus.icc.local/nexus/content/repositories/icc.simpliccity.release/</url>
+				</repository>
+				<snapshotRepository>
+					<id>icc.simpliccity.snapshot</id>
+					<name>ICC Nexus Snapshot Repository</name>
+					<url>http://nexus.icc.local/nexus/content/repositories/icc.simpliccity.snapshot/</url>
+				</snapshotRepository>
+			</distributionManagement>
+		</profile>
+
+		<profile>
+			<id>azure-devops</id>
+			<distributionManagement>
+				<repository>
+					<id>dev-azure-com-simpliccity-maven</id>
+					<url>https://pkgs.dev.azure.com/Simpliccity/_packaging/Maven/maven/v1</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</repository>
+			</distributionManagement>
+		</profile>
+	</profiles>
+
 
 </project>
