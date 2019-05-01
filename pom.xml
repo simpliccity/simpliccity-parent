@@ -46,6 +46,17 @@
 	
 	<distributionManagement>
 		<repository>
+		<id>dev-azure-com-simpliccity-simpliccity</id>
+		<url>https://pkgs.dev.azure.com/Simpliccity/_packaging/Simpliccity/maven/v1</url>
+		<releases>
+			<enabled>true</enabled>
+		</releases>
+		<snapshots>
+			<enabled>true</enabled>
+		</snapshots>
+		</repository>	
+		
+		<repository>
 			<id>icc.simpliccity.release</id>
 			<name>ICC Nexus Release Repository</name>
 			<url>http://nexus.icc.local/nexus/content/repositories/icc.simpliccity.release/</url>
