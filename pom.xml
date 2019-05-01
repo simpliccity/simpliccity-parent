@@ -69,17 +69,16 @@
 			<id>azure-devops</id>
 			<distributionManagement>
 				<repository>
-				<id>dev-azure-com-simpliccity-simpliccity</id>
-				<url>https://pkgs.dev.azure.com/Simpliccity/_packaging/Simpliccity/maven/v1</url>
-				<releases>
-					<enabled>true</enabled>
-				</releases>
-				<snapshots>
-					<enabled>true</enabled>
-				</snapshots>
-				</repository>	
+					<id>dev-azure-com-simpliccity-maven</id>
+					<url>https://pkgs.dev.azure.com/Simpliccity/_packaging/Maven/maven/v1</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</repository>
 			</distributionManagement>
-
 		</profile>
 	</profiles>
 
